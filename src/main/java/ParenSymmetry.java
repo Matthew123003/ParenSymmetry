@@ -3,13 +3,12 @@ package src.main.java;
 public class ParenSymmetry {
 
 
-    private Boolean isBalanced(String s) {
-        // implement this method
-    private void Boolean(isBalanced){
+    private Boolean isBalanced(String s){
 
-        }
-        return;
     }
+        // implement this method
+
+
 
     private void checkFile(String filename) {
         // open file named filename
