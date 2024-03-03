@@ -1,10 +1,13 @@
 package src.main.java;
 
+import java.io.*;
+import java.util.Scanner;
+
 public class ParenSymmetry {
 
 
-    private Boolean isBalanced(String s){
-
+    private Boolean isBalanced(String s) {
+        return true;
     }
         // implement this method
 
@@ -12,6 +15,20 @@ public class ParenSymmetry {
 
     private void checkFile(String filename) {
         // open file named filename
+          try {
+              FileInputStream fis = new FileInputStream("filename");
+              Scanner scan = new Scanner(fis);
+
+              while (scan.hasNextLine()) {
+                  System.out.println(scan.nextLine());
+
+                  scan.close();
+              }
+          }
+           catch (FileNotFoundException e){
+               e.printStackTrace();
+              }
+
 
         // for each line in the file
             // read the line
