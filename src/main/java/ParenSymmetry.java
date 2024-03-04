@@ -16,16 +16,12 @@ public class ParenSymmetry {
     private void checkFile(String filename) {
         // open file named filename
           try {
-              FileInputStream fis = new FileInputStream("filename");
-              Scanner scan = new Scanner(fis);
-
-              while (scan.hasNextLine()) {
-                  System.out.println(scan.nextLine());
-
-                  scan.close();
-              }
-          }
-           catch (FileNotFoundException e){
+              BufferedReader reader = new BufferedReader(new FileReader("filename"));
+              String line;
+              while ((line = reader.readLine()) != null ){
+                  System.out.println(reader.readLine());}
+                  reader.close();
+              } catch (IOException e){
                e.printStackTrace();
               }
 
