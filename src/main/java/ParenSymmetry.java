@@ -2,29 +2,41 @@ package src.main.java;
 
 import java.io.*;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ParenSymmetry {
 
 
     private Boolean isBalanced(String s) {
-        return true;
-    }
         // implement this method
+        int length = s.length();
+        char[] chars = new char[s.length()];
 
+        for(int i = 0; i < length; i++){
+            
+        }
+
+       return null;
+    }
 
 
     private void checkFile(String filename) {
         // open file named filename
-          try {
-              BufferedReader reader = new BufferedReader(new FileReader("filename"));
-              String line;
-              while ((line = reader.readLine()) != null ){
-                  System.out.println(reader.readLine());}
-                  reader.close();
-              } catch (IOException e){
-               e.printStackTrace();
-              }
+          File file = new File(filename);
 
+          Scanner scanner;
+          try{
+              scanner = new Scanner(file);
+              while(scanner.hasNextLine()){
+                  String line = scanner.nextLine();
+                  boolean b = isBalanced(line);
+                  System.out.println(b);
+              }
+              scanner.close();
+          }catch (FileNotFoundException e){
+              System.out.println(e.getMessage());
+              System.exit(1);
+          }
 
         // for each line in the file
             // read the line
