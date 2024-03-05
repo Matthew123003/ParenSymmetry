@@ -10,13 +10,26 @@ public class ParenSymmetry {
     private Boolean isBalanced(String s) {
         // implement this method
         int length = s.length();
-        char[] chars = new char[s.length()];
+        char[] chars = s.toCharArray();
+        int open = 0;
+        int close = 0;
 
-        for(int i = 0; i < length; i++){
-            
+        for(int i = 0; i < chars.length; i++){
+
+            if(chars[i] == '('){
+                open++;
+            }else if(chars[i] == ')'){
+                close++;
+            }
         }
-
-       return null;
+        boolean status;
+        if(open == close){
+            status = true;
+        }else{
+            status = false;
+        }
+        
+       return status;
     }
 
 
