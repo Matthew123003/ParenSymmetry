@@ -28,7 +28,7 @@ public class ParenSymmetry {
         }else{
             status = false;
         }
-        
+
        return status;
     }
 
