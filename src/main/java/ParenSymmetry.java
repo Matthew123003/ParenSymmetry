@@ -78,6 +78,8 @@ public class ParenSymmetry {
         }
         printResult(trues, true);
 
+        ps.checkFile("TestStrings0.txt");
+
     }
 
     private static void printResult(Boolean b0, boolean b) {
